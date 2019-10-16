@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate account</title>
+</head>
+<body>
+<script>
+    function checkMa(str) {
+        checkma = /^[0-9a-z_]{6,}$/;
+        return checkma.test(str);
+    }
+
+    let b = '123abc_';
+    console.log(checkMa(b));
+    let c = '_abc123';
+    console.log(checkMa(c));
+    let d = '______';
+    console.log(checkMa(d));
+    let e = '123456';
+    console.log(checkMa(e));
+    let f = 'abcdefg';
+    console.log(checkMa(f));
+    let g = '@';
+    console.log(checkMa(g));
+    let h = '12345';
+    console.log(checkMa(h));
+    let i = '1234_';
+    console.log(checkMa(i));
+    let j = 'abcde';
+    console.log(checkMa(j));
+</script>
+</body>
+</html>
